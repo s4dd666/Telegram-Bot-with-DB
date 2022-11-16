@@ -3,14 +3,10 @@ from peewee import SqliteDatabase
 # Импорты с файлов проекта
 
 # Токен бота
-TOKEN = '5206275794:AAEi3IxC-fbPTMHmidznbS6XhK-SPus9Gao'
+TOKEN = 'TOKEN' 
 
-Admin = 442199503
-Moder = 1457507950
-All = [442199503, 1457507950]
-Di = 388896787
-Dima = 521013235
-Password = '666666'
+Admin = 123456789 # Your telegram ID
+Password = 666 # Your pass for accept mailing
 
 
 
