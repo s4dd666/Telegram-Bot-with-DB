@@ -7,6 +7,8 @@ Logs as user and simultaneously logs the sent message to another database table.
 If the user has already been in the database,
 then the bot checks the relevance of the data: username, first name, last name and updates them in the database if necessary.
 
+
+
 What bot can do? He had small pool functions:
 
 /start - welcome message and description of the bot: 
@@ -22,4 +24,3 @@ What bot can do? He had small pool functions:
       /telegram - My telegram.
       
       /start - back to start.
-
