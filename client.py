@@ -189,11 +189,18 @@ async def get_address(message: types.Message, state: FSMContext):
 		                     f'Чтобы начать новую рассылку, нажмите:\n'
 		                     f'/mailing')
 		await state.finish()
-	elif message.text == Password:
-		for all in All:
-			await bot.send_message(all, f"Рассылка от Админа {message.from_user.username}:\n"
-			                            f"\n{data['username']}\n")
+		elif message.text == Password:
+		with db:
+			query = (User.select())
+			count = 0
+			for all_users in query:
+				count += 1
+				All = (all_users.telegram_id)
+				await bot.send_message(All, f"Рассылка от Админа {message.from_user.username}:\n"
+				                            f"\n{data['username']}\n")
+
 		await message.answer(f"Уведомление:\nРассылка успешно выполнена\n"
+		                     f"\nПользователей вcего: {count}\n"
 		                     f"\nНазад в /menu")
 		await state.finish()
 	else:
