@@ -149,7 +149,7 @@ async def cmd_stats(message: types.Message):
 		await message.answer(f'Пользователей в базе данных: {len(users)}')
 
 	with db: # Подсчёт количества всех сообщений в БД
-		messages = Message.select().where(Message.user_id != 0)
+		messages = Message.select().where(Message.message_id != 0)
 		await message.answer(f'Всего сообщений боту: {len(messages)}')
 
 	with db: # Подсчёт сообщений в БД от конкретного юзера
