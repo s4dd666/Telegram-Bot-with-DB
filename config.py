@@ -12,4 +12,4 @@ Password = 666 # Your pass for accept mailing
 
 # База данных
 
-db = SqliteDatabase('db_bot/bot_database_v2.0.db')
+db = SqliteDatabase('tg_bot_database.db')
